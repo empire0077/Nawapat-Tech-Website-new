@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="100%" height="100%">
+  <!-- Definitions for artistic styles and gradients -->
+  <defs>
+    <!-- Skin tone gradient -->
+    <radialGradient id="skinGrad" cx="50%" cy="45%" r="55%" fx="45%" fy="40%">
+      <stop offset="0%" stop-color="#FFF5EB" />
+      <stop offset="70%" stop-color="#FFE3D1" />
+      <stop offset="100%" stop-color="#FCD2C1" />
+    </radialGradient>
+    
+    <!-- Shadow gradient for neck -->
+    <linearGradient id="neckShadow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#EAA689" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+
+    <!-- Blazer/Suit charcoal fabric gradient -->
+    <linearGradient id="suitGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B" />
+      <stop offset="40%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#030712" />
+    </linearGradient>
+
+    <!-- Hair watercolor-like texture/gradient -->
+    <linearGradient id="hairGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2D313D" />
+      <stop offset="60%" stop-color="#111318" />
+      <stop offset="100%" stop-color="#07080A" />
+    </linearGradient>
+
+    <!-- Drop shadow for depth -->
+    <filter id="inkShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.1" flood-color="#0F172A" />
+    </filter>
+  </defs>
+
+  <!-- Solid white artistic canvas background -->
+  <rect width="100%" height="100%" fill="#FFFFFF" />
+
+  <!-- Background subtle watercolor/architectural texture overlays -->
+  <g opacity="0.1">
+    <!-- Grid elements -->
+    <path d="M 40 0 L 40 500 M 80 0 L 80 500 M 120 0 L 120 500 M 160 0 L 160 500 M 200 0 L 200 500 M 240 0 L 240 500 M 280 0 L 280 500 M 320 0 L 320 500 M 360 0 L 360 500" stroke="#000" stroke-width="0.2" fill="none" />
+    <path d="M 0 50 L 400 50 M 0 100 L 400 100 M 0 150 L 400 150 M 0 200 L 400 200 M 0 250 L 400 250 M 0 300 L 400 300 M 0 350 L 400 350 M 0 400 L 400 400 M 0 450 L 400 450" stroke="#000" stroke-width="0.2" fill="none" />
+    <!-- Diagonal architectural lines -->
+    <path d="M 0 0 L 400 500 M 400 0 L 0 500" stroke="#000" stroke-width="0.1" fill="none" />
+  </g>
+
+  <!-- PORTRAIT GROUP -->
+  <g id="portrait" filter="url(#inkShadow)">
+    
+    <!-- SHOULDER & SUIT BLOCK (BASE) -->
+    <!-- Back collar -->
+    <path d="M 125 240 Q 200 200 275 240 L 280 260 L 120 260 Z" fill="#0F172A" />
+
+    <!-- T-shirt block (black) -->
+    <path d="M 140 230 C 140 230, 200 270, 260 230 L 290 350 L 110 350 Z" fill="#0A0A0C" />
+    
+    <!-- T-shirt crewneck collar rib -->
+    <path d="M 140 230 Q 200 265 260 230" fill="none" stroke="#27272A" stroke-width="6" stroke-linecap="round" />
+
+    <!-- RPAAI Logo on chest -->
+    <g transform="translate(160, 275)">
+      <!-- Logo Graphic text -->
+      <text x="40" y="0" font-family="'Inter', sans-serif" font-size="20" font-weight="800" text-anchor="middle" letter-spacing="-0.5">
+        <tspan fill="#38BDF8">RPA</tspan>
+        <tspan fill="#F59E0B">Ai</tspan>
+      </text>
+      <!-- Subtext: Center of Excellence -->
+      <text x="40" y="14" font-family="'Inter', sans-serif" font-size="6" font-weight="500" fill="#E4E4E7" text-anchor="middle" letter-spacing="1">
+        CENTER OF EXCELLENCE
+      </text>
+    </g>
+
+    <!-- SUIT / BLAZER JACKET -->
+    <!-- Left Shoulder/Body (viewer's left) -->
+    <path d="M 140 230 C 115 235, 70 290, 50 420 L 195 500 L 195 290 Z" fill="url(#suitGrad)" />
+    <!-- Right Shoulder/Body (viewer's right) -->
+    <path d="M 260 230 C 285 235, 330 290, 350 420 L 205 500 L 205 290 Z" fill="url(#suitGrad)" />
+    
+    <!-- Left Lapel -->
+    <path d="M 145 230 L 115 320 L 195 440 L 195 245 Z" fill="#1E293B" stroke="#334155" stroke-width="1" />
+    <!-- Right Lapel -->
+    <path d="M 255 230 L 285 320 L 205 440 L 205 245 Z" fill="#1E293B" stroke="#334155" stroke-width="1" />
+
+    <!-- Sharp sketchy details on suit (artistic ink contours) -->
+    <path d="M 50 420 C 60 380, 100 260, 140 230" stroke="#000000" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.8" />
+    <path d="M 350 420 C 340 380, 300 260, 260 230" stroke="#000000" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.8" />
+    <path d="M 145 230 L 115 320 L 195 440" stroke="#000000" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.75" />
+    <path d="M 255 230 L 285 320 L 205 440" stroke="#000000" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.75" />
+    <path d="M 195 350 L 195 500" stroke="#000000" stroke-width="1" fill="none" opacity="0.7" />
+
+    <!-- NECK & HEAD -->
+    <!-- Neck -->
+    <path d="M 155 190 L 155 245 C 155 255, 245 255, 245 245 L 245 190 Z" fill="url(#skinGrad)" />
+    <!-- Neck shade/shadow for depth -->
+    <path d="M 155 190 Q 200 220 245 190 L 245 210 Q 200 245 155 210 Z" fill="url(#neckShadow)" opacity="0.4" />
+    <!-- Neck sketchy ink outlines -->
+    <path d="M 155 185 L 155 240 Q 200 255 245 240 L 245 185" stroke="#000000" stroke-width="1.2" fill="none" opacity="0.7" />
+
+    <!-- Head base/ears -->
+    <path d="M 145 140 Q 135 140 137 155 Q 140 165 147 160 Z" fill="url(#skinGrad)" stroke="#000" stroke-width="0.8" /> <!-- Left Ear -->
+    <path d="M 255 140 Q 265 140 263 155 Q 260 165 253 160 Z" fill="url(#skinGrad)" stroke="#000" stroke-width="0.8" /> <!-- Right Ear -->
+
+    <!-- Head Face Oval -->
+    <path d="M 142 130 C 135 180, 145 220, 200 222 C 255 220, 265 180, 258 130 C 255 90, 145 90, 142 130 Z" fill="url(#skinGrad)" />
+    
+    <!-- Cheeks & Nose shadows (watercolor blush/wash) -->
+    <ellipse cx="165" cy="175" rx="15" ry="8" fill="#F87171" opacity="0.15" />
+    <ellipse cx="235" cy="175" rx="15" ry="8" fill="#F87171" opacity="0.15" />
+
+    <!-- FACE DETAILS (INK SKETCH STYLE) -->
+    <!-- Eyebrows -->
+    <path d="M 160 145 Q 175 140 185 145" fill="none" stroke="#1E293B" stroke-width="2.5" stroke-linecap="round" />
+    <path d="M 240 145 Q 225 140 215 145" fill="none" stroke="#1E293B" stroke-width="2.5" stroke-linecap="round" />
+    
+    <!-- Eyes (Looking slightly up and to viewer's left/his right) -->
+    <!-- Left Eye -->
+    <path d="M 162 153 Q 172 148 182 153" fill="none" stroke="#000" stroke-width="1.5" stroke-linecap="round" />
+    <path d="M 164 153 Q 172 157 180 153" fill="none" stroke="#000" stroke-width="0.6" />
+    <circle cx="174" cy="151.5" r="3.5" fill="#111827" />
+    <circle cx="175" cy="150" r="1.2" fill="#FFF" /> <!-- Eye light glint -->
+    
+    <!-- Right Eye -->
+    <path d="M 238 153 Q 228 148 218 153" fill="none" stroke="#000" stroke-width="1.5" stroke-linecap="round" />
+    <path d="M 236 153 Q 228 157 220 153" fill="none" stroke="#000" stroke-width="0.6" />
+    <circle cx="226" cy="151.5" r="3.5" fill="#111827" />
+    <circle cx="227" cy="150" r="1.2" fill="#FFF" /> <!-- Eye light glint -->
+
+    <!-- Nose -->
+    <path d="M 200 145 L 200 176 Q 200 180 205 180" fill="none" stroke="#000" stroke-width="1.5" stroke-linecap="round" />
+    <path d="M 193 178 Q 200 182 207 178" fill="none" stroke="#000" stroke-width="0.8" />
+
+    <!-- Mouth & Smile (Warm and professional) -->
+    <path d="M 175 192 Q 200 204 225 192" fill="none" stroke="#000" stroke-width="1.6" stroke-linecap="round" />
+    <!-- Smile corner lines -->
+    <path d="M 173 193 Q 175 190 177 192" fill="none" stroke="#000" stroke-width="1" />
+    <path d="M 227 193 Q 225 190 223 192" fill="none" stroke="#000" stroke-width="1" />
+    <path d="M 185 198 Q 200 204 215 198" fill="none" stroke="#E11D48" stroke-width="1" opacity="0.3" /> <!-- Lower lip shadow -->
+
+    <!-- Sharp Jawline Sketch Contours -->
+    <path d="M 142 135 C 138 175, 146 212, 200 222" fill="none" stroke="#000000" stroke-width="1.5" opacity="0.8" />
+    <path d="M 258 135 C 262 175, 254 212, 200 222" fill="none" stroke="#000000" stroke-width="1.5" opacity="0.8" />
+
+    <!-- HAIR (STYLISH TEXTURED INK SKETCH) -->
+    <!-- Hair Volume -->
+    <path d="M 140 125 C 135 110, 140 90, 155 80 C 170 70, 195 72, 210 75 C 225 72, 245 78, 255 90 C 262 100, 262 115, 258 130 C 252 130, 248 115, 248 110 C 248 100, 240 90, 220 90 C 205 90, 195 95, 185 92 C 170 92, 155 102, 152 115 C 152 120, 145 125, 140 125 Z" fill="url(#hairGrad)" />
+    
+    <!-- Hair sketchy details (individual strokes) -->
+    <path d="M 148 100 Q 155 82, 175 78" fill="none" stroke="#000000" stroke-width="1.5" opacity="0.9" />
+    <path d="M 165 85 Q 185 75, 210 78" fill="none" stroke="#000000" stroke-width="1.5" opacity="0.9" />
+    <path d="M 200 76 Q 225 72, 245 82" fill="none" stroke="#000000" stroke-width="1.5" opacity="0.9" />
+    <path d="M 225 80 Q 248 85, 255 100" fill="none" stroke="#000000" stroke-width="1.5" opacity="0.9" />
+    <path d="M 142 120 C 145 110, 150 102, 158 98" fill="none" stroke="#000000" stroke-width="1.2" opacity="0.8" />
+    <path d="M 256 120 C 253 110, 248 102, 242 98" fill="none" stroke="#000000" stroke-width="1.2" opacity="0.8" />
+
+    <!-- Additional fine cross-hatching and watercolor paint-stroke lines around shoulders (artistic watercolor portrait effect) -->
+    <g opacity="0.3" stroke="#000" stroke-width="0.5">
+      <line x1="60" y1="380" x2="80" y2="390" />
+      <line x1="65" y1="375" x2="85" y2="385" />
+      <line x1="70" y1="370" x2="90" y2="380" />
+      
+      <line x1="340" y1="380" x2="320" y2="390" />
+      <line x1="335" y1="375" x2="315" y2="385" />
+      <line x1="330" y1="370" x2="310" y2="380" />
+    </g>
+  </g>
+</svg>

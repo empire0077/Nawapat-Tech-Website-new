@@ -1,3 +1,5 @@
+'use client';
+
 import { FadeIn } from '@/components/FadeIn';
 import { Parallax } from '@/components/Parallax';
 import { DataNodes } from '@/components/DataNodes';
@@ -47,6 +49,15 @@ export default function ArchitectPage() {
             <FadeIn delay={0.3} direction="left" className="w-full max-w-md">
                <div className="relative w-full aspect-[4/5] bg-slate-50 rounded-lg border border-gray-100 shadow-sm overflow-hidden group flex items-center justify-center">
                   <DataNodes />
+                  <img 
+                    src="/architect_portrait.svg" 
+                    alt="Dr. Nawapat Thamchob" 
+                    className="absolute inset-0 w-full h-full object-cover rounded-lg z-20" 
+                    referrerPolicy="no-referrer"
+                    onError={(e) => {
+                      e.currentTarget.style.display = 'none';
+                    }}
+                  />
                   <span className="text-slate/40 text-sm tracking-widest font-mono uppercase z-10">Portrait Placeholder</span>
                </div>
             </FadeIn>

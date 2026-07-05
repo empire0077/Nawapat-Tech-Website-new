@@ -71,7 +71,7 @@ export default function HomePage() {
           </div>
           <div className="lg:col-span-5 relative flex justify-center lg:justify-end">
             <FadeIn delay={0.4} direction="left" className="w-full max-w-md">
-              <div className="relative w-full aspect-[4/5] bg-slate-50 rounded-lg border border-gray-100 shadow-sm overflow-hidden flex flex-col justify-center p-12 relative group">
+              <div className="relative w-full aspect-[4/5] bg-slate-50 rounded-lg border border-gray-100 shadow-sm overflow-hidden flex flex-col justify-center relative group">
                 <div className="absolute inset-0 opacity-[0.03] blueprint-grid" />
                 {/* Visual architectural blueprint lines */}
                 <div className="absolute top-1/4 left-0 right-0 h-px bg-gray-200/50" />
@@ -81,7 +81,18 @@ export default function HomePage() {
                 <div className="absolute left-2/4 top-0 bottom-0 w-px bg-gray-200/50" />
                 <div className="absolute left-3/4 top-0 bottom-0 w-px bg-gray-200/50" />
                 
-                <div className="space-y-6 z-10 relative">
+                {/* Portrait Image of the architect */}
+                <img 
+                  src="/architect_portrait.svg" 
+                  alt="Dr. Nawapat Thamchob" 
+                  className="absolute inset-0 w-full h-full object-cover rounded-lg z-20" 
+                  referrerPolicy="no-referrer"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                  }}
+                />
+
+                <div className="p-12 space-y-6 z-10 relative">
                   <div className="w-12 h-12 flex items-center justify-center border border-gray-100 bg-white shadow-sm rounded-full">
                     <Cpu className="w-5 h-5 text-onyx animate-pulse" />
                   </div>
