@@ -50,7 +50,7 @@ export default function ArchitectPage() {
                <div className="relative w-full aspect-[4/5] bg-slate-50 rounded-lg border border-gray-100 shadow-sm overflow-hidden group flex items-center justify-center">
                   <DataNodes />
                   <img 
-                    src="/architect_portrait.svg" 
+                    src="/public/นวภัทร์ ธรรมชอบ 02.png" 
                     alt="Dr. Nawapat Thamchob" 
                     className="absolute inset-0 w-full h-full object-cover rounded-lg z-20" 
                     referrerPolicy="no-referrer"
