@@ -83,7 +83,7 @@ export default function HomePage() {
                 
                 {/* Portrait Image of the architect */}
                 <img 
-                  src="/นวภัทร์ ธรรมชอบ 02.png" 
+                  src="/Em11.png" 
                   alt="Dr. Nawapat Thamchob" 
                   className="absolute inset-0 w-full h-full object-cover rounded-lg z-20" 
                   referrerPolicy="no-referrer"
