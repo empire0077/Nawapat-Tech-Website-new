@@ -1,0 +1,6 @@
+{
+  "name": "Nawapat Tech",
+  "description": "Enterprise Architecture & Strategy by Nawapat Thamchob",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
