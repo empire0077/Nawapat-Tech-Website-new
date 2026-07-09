@@ -14,6 +14,7 @@ import {
   Sparkles 
 } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function HomePage() {
   const { t, lang } = useLanguage();
@@ -82,14 +83,13 @@ export default function HomePage() {
                 <div className="absolute left-3/4 top-0 bottom-0 w-px bg-gray-200/50" />
                 
                 {/* Portrait Image of the architect */}
-                <img 
-                  src="/Em11.png" 
+                <Image 
+                  src="/architect_portrait.svg" 
                   alt="Dr. Nawapat Thamchob" 
-                  className="absolute inset-0 w-full h-full object-cover rounded-lg z-20" 
+                  fill
+                  priority
+                  className="object-cover rounded-lg z-20" 
                   referrerPolicy="no-referrer"
-                  onError={(e) => {
-                    e.currentTarget.style.display = 'none';
-                  }}
                 />
 
                 <div className="p-12 space-y-6 z-10 relative">
