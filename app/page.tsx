@@ -15,12 +15,26 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { KnowledgeExplorer } from '@/components/KnowledgeExplorer';
+import { articles, generatePersonSchema } from '@/lib/articles';
 
 export default function HomePage() {
   const { t, lang } = useLanguage();
 
+  const absoluteArticles = articles.map(art => ({
+    title: lang === 'th' ? art.titleTh : art.titleEn,
+    url: `https://nawapat.tech/${art.category}/${art.slug}`
+  }));
+  const personSchema = generatePersonSchema(absoluteArticles);
+
   return (
     <main className="min-h-screen bg-white text-onyx pt-24 overflow-hidden selection:bg-navy selection:text-white">
+      {/* Insert JSON-LD Person-centric Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+      />
+
       {/* Background blueprint grid overlay */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.02] blueprint-grid z-0" />
 
@@ -190,80 +204,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SECTION 3: STRATEGIC FRAMEWORKS */}
-      <section id="frameworks" className="py-32 px-8 md:px-16 lg:px-24 bg-white relative z-10">
-        <div className="max-w-screen-2xl mx-auto">
-          <Parallax offset={10}>
-            <FadeIn className="max-w-3xl mb-16">
-              <span className="text-xs font-mono uppercase tracking-widest text-slate block mb-3">
-                Methodologies
-              </span>
-              <h2 className="text-3xl md:text-4xl font-medium tracking-tight text-onyx">
-                {t.frameworks.title}
-              </h2>
-            </FadeIn>
-          </Parallax>
+      {/* SECTION 3: KNOWLEDGE EXPLORER (INTEGRATING ALL 27 KNOWLEDGE TREE NODES) */}
+      <KnowledgeExplorer />
 
-          <div className="grid md:grid-cols-3 gap-8 items-stretch">
-            {/* Framework 1 */}
-            <FadeIn delay={0.1} className="h-full">
-              <div className="h-full bg-slate-50 p-10 border border-gray-100 hover:border-onyx/20 transition-all duration-300 ease-out flex flex-col justify-between">
-                <div>
-                  <span className="text-xs font-mono text-slate block mb-6">01 / ARCHITECTURE</span>
-                  <h3 className="text-xl font-medium text-onyx mb-4 tracking-tight">
-                    {t.frameworks.f1Title}
-                  </h3>
-                  <p className="text-slate text-sm leading-relaxed font-light">
-                    {t.frameworks.f1Desc}
-                  </p>
-                </div>
-                <div className="pt-8 mt-8 border-t border-gray-200/50 flex items-center justify-between text-xs font-mono text-slate">
-                  <span>DIM_MODEL: 5D</span>
-                  <span>EVALUATION</span>
-                </div>
-              </div>
-            </FadeIn>
-
-            {/* Framework 2 */}
-            <FadeIn delay={0.2} className="h-full">
-              <div className="h-full bg-slate-50 p-10 border border-gray-100 hover:border-onyx/20 transition-all duration-300 ease-out flex flex-col justify-between">
-                <div>
-                  <span className="text-xs font-mono text-slate block mb-6">02 / STRUCTURE</span>
-                  <h3 className="text-xl font-medium text-onyx mb-4 tracking-tight">
-                    {t.frameworks.f2Title}
-                  </h3>
-                  <p className="text-slate text-sm leading-relaxed font-light">
-                    {t.frameworks.f2Desc}
-                  </p>
-                </div>
-                <div className="pt-8 mt-8 border-t border-gray-200/50 flex items-center justify-between text-xs font-mono text-slate">
-                  <span>PYR_MODEL: ORG_CAP</span>
-                  <span>DECOUPLING</span>
-                </div>
-              </div>
-            </FadeIn>
-
-            {/* Framework 3 */}
-            <FadeIn delay={0.3} className="h-full">
-              <div className="h-full bg-slate-50 p-10 border border-gray-100 hover:border-onyx/20 transition-all duration-300 ease-out flex flex-col justify-between">
-                <div>
-                  <span className="text-xs font-mono text-slate block mb-6">03 / HORIZON</span>
-                  <h3 className="text-xl font-medium text-onyx mb-4 tracking-tight">
-                    {t.frameworks.f3Title}
-                  </h3>
-                  <p className="text-slate text-sm leading-relaxed font-light">
-                    {t.frameworks.f3Desc}
-                  </p>
-                </div>
-                <div className="pt-8 mt-8 border-t border-gray-200/50 flex items-center justify-between text-xs font-mono text-slate">
-                  <span>FORESIGHT: PREDICTIVE</span>
-                  <span>EVOLUTION</span>
-                </div>
-              </div>
-            </FadeIn>
-          </div>
-        </div>
-      </section>
 
       {/* SECTION 4: SHOWCASE */}
       <section id="showcase" className="py-32 px-8 md:px-16 lg:px-24 bg-slate-50 border-t border-gray-100 relative z-10">
